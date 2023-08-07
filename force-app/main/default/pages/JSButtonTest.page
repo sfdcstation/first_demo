@@ -1,0 +1,27 @@
+<apex:page standardController="Account" >
+
+  
+    <script src="/soap/ajax/33.0/connection.js" type="text/javascript"></script>
+    <script src="/soap/ajax/33.0/apex.js" type="text/javascript"></script>
+    <script type="text/javascript">  
+
+     function AccountResult(){          
+         
+              sforce.connection.sessionId = '{!$Api.Session_ID}'; 
+              var account = new sforce.SObject("Account");
+ 
+              account.ID = '{!Account.Id}';
+              alert('AccId'+account.ID);
+              var result = sforce.connection.query("SELECT Id, Name from Account where id='"+account.ID +"'");
+              alert('result'+result);
+              var records = result.getArray("records");
+                     alert('==========records======='+records);
+               
+                  
+          
+      }
+      window.onload=function(){
+          AccountResult();
+      }
+     </script>
+    </apex:page>

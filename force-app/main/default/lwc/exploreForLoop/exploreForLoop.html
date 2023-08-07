@@ -1,0 +1,25 @@
+<template>
+  
+    <ul>
+        <template for:each={cars} for:item="car">             
+         <li key={car.Id}> 
+                <lightning-card title="Car Name">
+                    {car.company} is {car.colour} colour
+                </lightning-card>
+        </li>    
+    </template>
+    </ul>
+
+<ul>
+    <template iterator:it ={cars}>
+        <li key={it.value.Id}>
+            <div if:true={it.first}>Starting car name is {it.value.company} </div>
+            <div if:true={it.last}>Ending car name is {it.value.company}</div>
+        </li>
+
+    </template>
+
+    
+</ul>
+
+</template>

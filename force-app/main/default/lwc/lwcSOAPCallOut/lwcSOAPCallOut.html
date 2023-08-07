@@ -1,0 +1,11 @@
+<template>
+    <lightning-input type="number" label="Input 1" name="Input 1" onchange={handleChange}></lightning-input>
+    <lightning-input type="number" label="Input 2" name="Input 2" onchange={handleChange}></lightning-input>
+ 
+    <lightning-button variant="brand" label="+" title="Sum" onclick={handleSum} class="slds-m-left_x-small"></lightning-button>
+    <lightning-button variant="brand" label="-" title="Sub" onclick={handleSub} class="slds-m-left_x-small"></lightning-button>
+    <lightning-button variant="brand" label="*" title="Mul" onclick={handleMul} class="slds-m-left_x-small"></lightning-button>
+ 
+    Result :- {result}
+    
+</template>

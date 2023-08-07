@@ -1,0 +1,30 @@
+<template>
+       <lightning-button variant="brand" title="Show" label={buttonLevel} 
+   onclick={handleContact}></lightning-button>
+
+    <template if:true={flag}>
+
+        <template if:true={contactList.data}>
+            
+            <template for:each={contactList.data} for:item="contact">
+             <div key={contact.Id}>
+                <lightning-card  variant="Narrow"  title={contact.Name} icon-name="standard:contact">
+                    <div class="slds-icon-standard-phone">
+                   {contact.Phone}
+
+                   </div>
+                    <p><lightning-formatted-text value={contact.Email} linkify></lightning-formatted-text></p>
+                 
+                </lightning-card>
+                               
+                <br/> 
+                
+            </div>
+             </template>
+         </template>
+
+         <template if:true={contactList.error}>
+            {contactList.error}
+        </template>
+    </template>
+    </template>

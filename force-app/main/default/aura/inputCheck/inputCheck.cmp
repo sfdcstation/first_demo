@@ -1,0 +1,14 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+   <aura:attribute name="name" type="String"/>
+    <aura:attribute name="isColor" type="boolean" default="true"/>
+    
+    <aura:if isTrue="{!v.isColor}">
+        <lightning:input type="text" value="{!v.name}" label="Enter a Name" />
+        <aura:set attribute="else">
+            <div>
+                <lightning:input type="text" value="{!v.name}" class="color" label="Enter a Name" />
+            </div>
+        </aura:set>
+    </aura:if>
+    <lightning:button variant="brand" label="Brand action" title="Brand action" onclick="{! c.handleClick }" />	
+</aura:component>

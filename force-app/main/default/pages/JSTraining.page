@@ -1,0 +1,20 @@
+<apex:page >
+Hello
+<script>
+
+employee = {
+id:10,
+age:10,
+name:'Priyankar'
+}
+
+let test = name => {
+return `My name is ${name}`;
+}
+
+console.log(test('Priyankar'));
+
+
+</script>
+
+</apex:page>

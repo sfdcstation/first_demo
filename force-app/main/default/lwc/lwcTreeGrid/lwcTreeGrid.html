@@ -1,0 +1,12 @@
+<template>
+    Hi {selectedRows}
+    <lightning-tree-grid
+     data={data} 
+     columns={columns} 
+     key-field="name"
+     expanded-rows={currentExpanded}
+     selected-rows={selectrow}>
+    </lightning-tree-grid>
+
+
+</template>

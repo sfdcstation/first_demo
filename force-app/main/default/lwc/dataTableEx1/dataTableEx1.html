@@ -1,0 +1,27 @@
+<template>
+        <lightning-button onclick={handleclick} value="Selection" label="Selection"></lightning-button>
+   Contact Records: 
+      <div style="height: 300px;">
+    <lightning-datatable
+            key-field="Id"
+            data={contactdatatable}
+            columns={contactCoulmns}
+            >
+    </lightning-datatable>
+</div> 
+<p></p>
+<div></div>
+<template if:true= {showflag}>
+        
+        <lightning-card title="You have selected:" icon-name="custom:custom14">
+                <ul class="slds-m-around_medium">
+                    <template for:each={selectedContact} for:item="contact">
+                        <li key={contact.Id}>
+                           Name: {contact.Name}, Phone: {contact.Phone}, Email: {contact.Email}
+                        </li>
+                    </template>
+                </ul>
+            </lightning-card>
+
+</template>
+</template>

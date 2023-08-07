@@ -1,0 +1,13 @@
+<template>
+   <lightning-card title ="SFDC Course Informations">
+      <ul>
+          <template for:each={courseInformation} for:item="course">
+                <li key={course.courseNames} style="padding: 10px">
+                  <c-course-details course-detail-info={course} display-course-info=true></c-course-details>
+                  </li>
+
+           
+          </template>
+      </ul>
+   </lightning-card> 
+</template>

@@ -1,0 +1,13 @@
+<apex:page >
+<script>
+        const vehicle = {
+        type:'car',
+        
+        description: function(){
+        return `This is a ${this.type}`
+        }
+        }
+
+</script>
+
+</apex:page>

@@ -1,0 +1,25 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<aura:attribute name="testNumber" type="Integer" default="0"/>
+    
+    <lightning:input aura:id="field"
+                     type="number" 
+                     name="MyDatefield" 
+                     label="MyDateField" 
+                     value="{!v.testNumber}"
+                     min="1" 
+                     max="100"
+                    oncommit=  "{!c.checkValidity }"          />
+    
+     <aura:if isTrue="{!!v.testNumber}">
+        <!-- Show the message to ui -->
+        <div class="slds-notify slds-notify_toast slds-theme_error">
+            <span class="slds-assistive-text">ERROR</span>
+            <div class="slds-notify__content">
+            <h5 class="slds-text-heading_small slds-align_absolute-center">Error Message </h5>
+            <br/>
+         
+            </div>
+        </div>
+    </aura:if>
+     <!-- <aura:handler name="doInit" value="{!this }" action="{!c.checkValidity }"/>-->
+</aura:component>

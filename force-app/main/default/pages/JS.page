@@ -1,0 +1,16 @@
+<apex:page >
+
+<script>
+
+//let myname='Priyankar'
+
+if(true)
+{
+let myname='Pakhira'
+console.log (myname);
+}
+//console.log(myname);
+
+</script>
+
+</apex:page>

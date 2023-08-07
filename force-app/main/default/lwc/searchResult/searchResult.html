@@ -1,0 +1,9 @@
+<template>
+    <c-lwc-lookup1 onchangelookup={handlelookupChange}></c-lwc-lookup1>
+    Contact Records Found:
+            <lightning-datatable
+                key-field="Id"
+                data={contacts.data}
+                columns={columns}>
+            </lightning-datatable>
+</template>

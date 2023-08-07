@@ -1,0 +1,18 @@
+<template>
+    <div>
+    <lightning-input type="text" variant="standard" name="courseName" label="Course Name" placeholder="Course Name"
+    value={courseName} ></lightning-input>
+
+    <lightning-input type="number" variant="standard" name="courseFees" label="Course Fees" placeholder="Course Fees"
+    value={courseFees} onchange={changeCourseFees}></lightning-input>
+
+    <lightning-input type="number" variant="standard" name="noofstudent" label="Number of Students" placeholder="Number ofStudents"
+    value={numberofStudents} onchange={changeStudents}></lightning-input>
+</div>
+<div>
+    <lightning-button variant="brand" label="Total Course Fees" title="titleName" onclick={calculateCourseFees}></lightning-button>
+</div>
+<div>
+    Total Course fees : {totalCourseFees}
+</div>
+</template>
